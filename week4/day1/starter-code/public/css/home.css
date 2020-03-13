@@ -1,0 +1,134 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    height: 9vh;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 5;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0 3vw;
+    background-color: white;
+}
+
+header a {
+    font-size: 3vh;
+    text-decoration: none;
+    color: black;
+}
+
+header > a {
+    flex: 1;
+    width: 15vw; 
+    font-style: italic;
+}
+
+header > nav a {
+    margin-left: 3vw;
+}
+
+header > nav a:hover {
+    font-size: 3vh;
+    text-decoration: underline;
+    text-decoration-color: orange ;
+    color: orange;
+}
+
+#main-content {
+    position: relative;
+    top:9vh;
+    left:0;
+    width:100vw;
+}
+
+/*///////////////////////////*/
+/* HOME */
+
+#home {
+    width: 60vw;
+    height: 50vh;
+    margin: 16vh 20vw 25vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home div:first-child {
+    width:70%;
+}
+
+#home h1 {
+    font-size: 8vh;
+}
+
+#home p {
+    font-size: 3vh;
+}
+
+#home div:last-child {
+    width: 30%;
+}
+
+#home img {
+    width: 100%;
+}
+
+
+/*///////////////////////////*/
+/* PROJECTS */
+
+#project-presentation {
+    margin: 6vh 20vw;
+    width: 60vw;
+    border-bottom: solid grey 1px;
+}
+
+#project-presentation h1{
+    font-size: 10vh;
+}
+
+.project {
+    width: 80vw;
+    height: 50vh;
+    margin: 5vh 10vw 5vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project div:first-child {
+    width:30%;
+}
+
+.project h1 {
+    font-size: 8vh;
+}
+
+.project p {
+    font-size: 3vh;
+}
+
+.project div:last-child {
+    width: 70%;
+}
+
+.project img {
+    width: 100%;
+    border:lightgray solid 1px;
+}

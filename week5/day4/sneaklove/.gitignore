@@ -1,0 +1,4 @@
+node_modules/
+bin/seeds-sneakers.js
+bin/www
+bin/seeds-tags.js

@@ -1,0 +1,62 @@
+<div class="big-container product-manage-wrapper flexed-item">
+  <form method="post" action="/dashboard/edit/{{sneaker._id}}" class="edit-product-form">
+    <h3 class="form-title"> Edit Sneaker</h3>
+    <div class="form-item-wrapper flexed-item">
+      <label for="sneaker-image" class="label-name label">Model image</label>
+      <input id="sneaker-image" name="image" type="text" class="input-text input" placeholder="Nike Air Max 90" value="{{sneaker.image}}">
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="sneaker-name" class="label-name label">Model name</label>
+      <input id="sneaker-name" name="name" type="text" class="input-text input" placeholder="Nike Air Max 90" value="{{sneaker.name}}">
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="sneaker-ref" class="label-ref label">Réf.</label>
+      <input id="sneaker-ref" name="ref" type="text" class="input-text input" placeholder="ex: NV23498" value="{{sneaker.ref}}">
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="sneaker-size" class="label-ref label">Sizes</label>
+      <input id="sneaker-size" name="sizes" type="text" class="input-text input" placeholder="ex: 37" value="{{sneaker.sizes}}">
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="sneaker-descr" class="label-descr label">Description</label>
+      <input id="sneaker-descr" name="description" type="text" class="input-text input" placeholder="The better sneakers to run" value="{{sneaker.description}}">
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label for="sneaker-price" class="label-price label">Price</label>
+      <input id="sneaker-price" name="price" type="number" class="sneaker-price input" min="1" value="{{sneaker.price}}">
+    </div>
+    <label for="sneaker-main-cat" class="label-main-cat label">Choose main category...</label>
+     <div class="form-item-wrapper">
+
+      <input type="checkbox" name="men" class="select" 
+      {{#each sneaker.category}}
+      {{#compare this "men" operator="==="}}
+        checked
+      {{/compare}}
+      {{/each}}>
+      <label value="men">Men</label>
+
+      <input type="checkbox" name="women" class="select"
+      {{#each sneaker.category}}
+      {{#compare this "women" operator="==="}}
+        checked
+      {{/compare}}
+      {{/each}}>
+      <label value="women">Women</label>
+
+      <input type="checkbox" name="kids" class="select"
+      {{#each sneaker.category}}
+      {{#compare this "kids" operator="==="}}
+        checked
+      {{/compare}}
+      {{/each}}>
+      <label value="kids">Kids</label>
+      
+    </div>
+    <div class="form-item-wrapper flexed-item">
+      <label class="label">Tags</label>
+      {{> form_tags_select}}
+    </div>
+    <button class="button-primary add-sneaker-btn">Edit this sneaker</button>
+  </form>
+</div>

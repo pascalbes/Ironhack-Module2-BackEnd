@@ -1,0 +1,16 @@
+{
+  "name": "starter-code",
+  "version": "1.0.0",
+  "description": "\"portfolio\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"test\"",
+    "start": "nodemon ./server.js -e .js,.hbs"
+  },
+  "author": "Pascal Besson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.0"
+  }
+}

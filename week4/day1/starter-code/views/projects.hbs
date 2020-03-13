@@ -1,0 +1,17 @@
+<div id="project-presentation" class="column">
+    <h1>Project List</h1>
+    <p>Welcome on my project page, I hope you'll enjoy them blablabla</p>
+</div>
+
+{{#each projects}}
+<div class="project row">
+    <div>
+        <h1>{{this.name}}</h1>
+        <p>{{this.description}}</p>
+    </div>
+    <div>
+        <a href={{this.link}} target="_blank"><img src={{this.imgSource}}></a>
+    </div>
+</div>
+<hr>
+{{/each}}
